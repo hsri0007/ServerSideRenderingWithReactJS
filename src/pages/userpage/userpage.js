@@ -12,6 +12,6 @@ const Components = () => {
 };
 
 export default {
-  loadData: (store) => store.dispatch(getUsers(33)),
+  loadData: (store) => store.dispatch(getUsers()),
   component: Components,
 };
