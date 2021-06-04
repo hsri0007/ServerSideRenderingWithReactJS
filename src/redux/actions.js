@@ -1,0 +1,13 @@
+import axios from "axios";
+import { updateState } from "./reducers";
+
+export const getUsers = (props) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
+    dispatch(updateState(data));
+  } catch (error) {
+    console.log(error);
+  }
+};
