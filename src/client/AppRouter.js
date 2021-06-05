@@ -1,7 +1,6 @@
-import React from "react";
-import { Switch, Route, useParams, useHistory } from "react-router-dom";
 import Home from "./home";
 import UserPage from "../pages/userpage/userpage";
+import AdminPage from "../pages/adminPage/adminPage";
 
 // const AppRouter = () => {
 //   const id = useParams();
@@ -20,6 +19,11 @@ export default [
   {
     path: "/",
     component: Home,
+    exact: true,
+  },
+  {
+    path: "/admin",
+    component: AdminPage,
     exact: true,
   },
   {
