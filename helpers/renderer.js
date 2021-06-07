@@ -40,7 +40,7 @@ export default (req, store) => {
                       store.getState()
                     )}
               </script>
-          <script  type="text/javascript"  src="bundle.js" ></script>
+          <script src="bundle.js" ></script>
       </body>
   </html>
 `;
