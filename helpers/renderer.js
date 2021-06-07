@@ -29,17 +29,18 @@ export default (req, store) => {
   <!DOCTYPE html>
   <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>My page</title>
       <style class="initial" id="jss-server-side">${css}</style>
     </head>
-      <body> 
+      <body style="margin:0;padding:0;box-sizing:border-box" > 
           <div id="root">${content}</div>
-              <script>
+              <script >
                     window.INITIAL_STATE = ${serializeJavascript(
                       store.getState()
                     )}
               </script>
-          <script src="bundle.js" ></script>
+          <script  type="text/javascript"  src="bundle.js" ></script>
       </body>
   </html>
 `;

@@ -1,6 +1,7 @@
-import Home from "./home";
+import HomePage from "../pages/homePage/homePage";
 import UserPage from "../pages/userpage/userpage";
 import AdminPage from "../pages/adminPage/adminPage";
+import Main from "./Main";
 
 // const AppRouter = () => {
 //   const id = useParams();
@@ -17,17 +18,22 @@ import AdminPage from "../pages/adminPage/adminPage";
 
 export default [
   {
-    path: "/",
-    component: Home,
-    exact: true,
-  },
-  {
-    path: "/admin",
-    component: AdminPage,
-    exact: true,
-  },
-  {
-    ...UserPage,
-    path: "/:id",
+    ...Main,
+    routes: [
+      {
+        path: "/",
+        component: HomePage,
+        exact: true,
+      },
+      {
+        path: "/admin",
+        component: AdminPage,
+        exact: true,
+      },
+      {
+        ...UserPage,
+        path: "/:id",
+      },
+    ],
   },
 ];
