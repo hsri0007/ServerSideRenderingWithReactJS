@@ -60780,6 +60780,7 @@ exports.default = _default;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_userpage_userpage__ = __webpack_require__(581);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_adminPage_adminPage__ = __webpack_require__(605);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Main__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_notFoundPage_notFoundPage__ = __webpack_require__(712);
 
 
 function ownKeys(object, enumerableOnly) {
@@ -60823,6 +60824,7 @@ function _objectSpread(target) {
 
 
 
+
  // const AppRouter = () => {
 //   const id = useParams();
 //   return (
@@ -60844,8 +60846,8 @@ function _objectSpread(target) {
     component: __WEBPACK_IMPORTED_MODULE_3__pages_adminPage_adminPage__["a" /* default */],
     exact: true
   }, _objectSpread(_objectSpread({}, __WEBPACK_IMPORTED_MODULE_2__pages_userpage_userpage__["a" /* default */]), {}, {
-    path: "/:id"
-  })]
+    path: "/users"
+  }), _objectSpread({}, __WEBPACK_IMPORTED_MODULE_5__pages_notFoundPage_notFoundPage__["a" /* default */])]
 })]);
 
 /***/ }),
@@ -76638,6 +76640,23 @@ var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("pa
 }), 'MoreVert');
 
 exports.default = _default;
+
+/***/ }),
+/* 712 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+var NotFoundPage = function NotFoundPage() {
+  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", null, "Page Not Found"));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  component: NotFoundPage
+});
 
 /***/ })
 /******/ ]);

@@ -40,7 +40,7 @@ export default (req, store) => {
                       store.getState()
                     )}
               </script>
-          <script src="bundle.js" ></script>
+          <script src="bundle.js" async></script>
       </body>
   </html>
 `;
