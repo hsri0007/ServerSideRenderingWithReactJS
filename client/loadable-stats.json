@@ -1,10 +1,13 @@
 {
-  "hash": "0b914d67877ab4b3e96c",
+  "hash": "fa86c9f3e92284f64b46",
   "publicPath": "/",
   "outputPath": "D:\\test_reactSSR\\client",
   "assetsByChunkName": {
     "main": [
       "main.js"
+    ],
+    "App": [
+      "App.js"
     ],
     "pages-userpage-userpage": [
       "pages-userpage-userpage.js"
@@ -41,8 +44,8 @@
     {
       "type": "assets by status",
       "cached": true,
-      "filteredChildren": 15,
-      "size": 399940
+      "filteredChildren": 18,
+      "size": 437168
     }
   ],
   "namedChunkGroups": {
@@ -63,12 +66,37 @@
       "children": {},
       "childAssets": {}
     },
+    "App": {
+      "name": "App",
+      "chunks": [
+        123,
+        768
+      ],
+      "assets": [
+        {
+          "name": "123.js"
+        },
+        {
+          "name": "App.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
     "pages-userpage-userpage": {
       "name": "pages-userpage-userpage",
       "chunks": [
+        482,
         749
       ],
       "assets": [
+        {
+          "name": "482.js"
+        },
         {
           "name": "pages-userpage-userpage.js"
         }
@@ -291,6 +319,12 @@
       ]
     },
     {
+      "id": 768,
+      "files": [
+        "App.js"
+      ]
+    },
+    {
       "id": 749,
       "files": [
         "pages-userpage-userpage.js"
@@ -372,6 +406,18 @@
       "id": 868,
       "files": [
         "868.js"
+      ]
+    },
+    {
+      "id": 123,
+      "files": [
+        "123.js"
+      ]
+    },
+    {
+      "id": 482,
+      "files": [
+        "482.js"
       ]
     }
   ]

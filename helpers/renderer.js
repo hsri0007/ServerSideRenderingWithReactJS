@@ -11,6 +11,7 @@ import serializeJavascript from "serialize-javascript";
 import CleanCSS from "clean-css";
 import path from "path";
 import { ChunkExtractor, ChunkExtractorManager } from "@loadable/server";
+import { Helmet } from "react-helmet";
 
 const cleanCSS = new CleanCSS();
 export default (req, store) => {
@@ -43,10 +44,14 @@ export default (req, store) => {
     css = cleanCSS.minify(css).styles;
   }
 
+  const helmet = Helmet.renderStatic();
+
   return `
   <!DOCTYPE html>
   <html>
     <head>
+    ${helmet.title.toString()}
+    ${helmet.meta.toString()}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>My page</title>
       <style class="initial" id="jss-server-side">${css}</style> 
