@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@material-ui/styles";
 import { configureStore } from "@reduxjs/toolkit";
 import React from "react";
-
 import { Provider } from "react-redux";
 import { renderRoutes } from "react-router-config";
 import { BrowserRouter } from "react-router-dom";
