@@ -8,4 +8,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default { component: NotFoundPage };
+export default NotFoundPage;

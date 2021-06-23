@@ -1,29 +1,41 @@
-import HomePage from "../pages/homePage/homePage";
-import UserPage from "../pages/userpage/userpage";
-import AdminPage from "../pages/adminPage/adminPage";
-import Main from "./Main";
-import NotFoundPage from "../pages/notFoundPage/notFoundPage";
+import loadable from "react-loadable-visibility/loadable-components";
+import { getUsers } from "../redux/actions";
 
-// const AppRouter = () => {
-//   const id = useParams();
+const UserPage = loadable(() => import("../pages/userpage/userpage"), {
+  ssr: true,
+});
 
-//   return (
-//     <Switch>
-//       <Route exact path="/" component={Home} />
-//       <Route path="/:id" component={Com} />
-//     </Switch>
-//   );
-// };
-
-// export default AppRouter;
+const HomePage = loadable(() => import("../pages/homePage/homePage"), {
+  ssr: true,
+});
+const LoginPage = loadable(() => import("../pages/loginPage/loginPage"), {
+  ssr: true,
+});
+const AdminPage = loadable(() => import("../pages/adminPage/adminPage"), {
+  ssr: true,
+});
+const Nothing = loadable(() => import("./nothing"), {
+  ssr: true,
+});
+const NotFoundPage = loadable(
+  () => import("../pages/notFoundPage/notFoundPage"),
+  {
+    ssr: true,
+  }
+);
 
 export default [
   {
-    ...Main,
+    component: Nothing,
     routes: [
       {
         path: "/",
         component: HomePage,
+        exact: true,
+      },
+      {
+        path: "/login",
+        component: LoginPage,
         exact: true,
       },
       {
@@ -32,11 +44,12 @@ export default [
         exact: true,
       },
       {
-        ...UserPage,
-        path: "/users",
+        component: UserPage,
+        path: "/:id",
+        loadData: (store, url) => store.dispatch(getUsers(url)),
       },
       {
-        ...NotFoundPage,
+        component: NotFoundPage,
       },
     ],
   },

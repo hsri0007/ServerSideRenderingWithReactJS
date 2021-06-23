@@ -1,5 +1,12 @@
 import React from "react";
-import AdminComponent from "../../components/adminComponent/adminComponent";
+
+import loadable from "react-loadable-visibility/loadable-components";
+const AdminComponent = loadable(
+  () => import("../../components/adminComponent/adminComponent"),
+  {
+    ssr: true,
+  }
+);
 
 const AdminPage = () => {
   return (

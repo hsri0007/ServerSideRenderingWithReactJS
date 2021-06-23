@@ -1,11 +1,14 @@
 const path = require("path");
 const commonConfig = require("./webpack.common");
 const merge = require("webpack-merge");
+
 const mainConfig = {
+  mode: "production",
   entry: "./src/client/client.js",
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
+    publicPath: "/",
+    filename: "[name].js",
+    path: path.resolve(__dirname, "client"),
   },
   module: {
     rules: [

@@ -1,0 +1,1 @@
+(self.__LOADABLE_LOADED_CHUNKS__=self.__LOADABLE_LOADED_CHUNKS__||[]).push([[749],{3018:(e,_,n)=>{"use strict";n.r(_),n.d(_,{default:()=>u});var t=n(7294),r=n(9226);const u=function(){var e=(0,r.v9)((function(e){return e.counter})).value;return t.createElement("div",null,e[0].name)}}}]);

@@ -1,17 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getUsers } from "../../redux/actions";
 
-const Components = () => {
-  const data = useSelector((state) => state.counter);
-  return (
-    <div>
-      <div>{data.value[0].name}</div>
-    </div>
-  );
+const UserPage = () => {
+  const { value: data } = useSelector((state) => state.counter);
+  return <div>{data[0].name}</div>;
 };
 
-export default {
-  loadData: (store) => store.dispatch(getUsers()),
-  component: Components,
-};
+export default UserPage;

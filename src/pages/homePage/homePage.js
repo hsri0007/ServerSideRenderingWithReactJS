@@ -1,9 +1,16 @@
 import React from "react";
+import loadable from "react-loadable-visibility/loadable-components";
+const HomeComponent = loadable(
+  () => import("../../components/homeComponent/homeComponent"),
+  {
+    ssr: true,
+  }
+);
 
 const HomePage = () => {
   return (
     <div>
-      <h1>homepage</h1>
+      <HomeComponent />
     </div>
   );
 };
